@@ -102,7 +102,7 @@
                         <div class="icon">
                             <i class="fa fa-pie-chart"></i>
                         </div>
-                        <a href="{{ route('dashboard.clients.index') }}" class="small-box-footer">@lang('site.read') <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="{{ route('dashboard.outlays.index') }}" class="small-box-footer">@lang('site.read') <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
