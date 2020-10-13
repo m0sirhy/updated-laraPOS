@@ -68,7 +68,7 @@ class SupplierController extends Controller
 
     public function destroy(Supplier $supplier)
     {
-        $client->delete();
+        $supplier->delete();
         session()->flash('success', __('site.deleted_successfully'));
         return redirect()->route('dashboard.suppliers.index');
 

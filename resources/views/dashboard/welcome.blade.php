@@ -47,7 +47,7 @@
                     </div>
                 </div>
 
-                {{--suppliers--}}
+                <!-- {{--suppliers--}}
                 <div class="col-lg-3 col-xs-6">
                     <div class="small-box bg-gray">
                         <div class="inner">
@@ -60,7 +60,7 @@
                         </div>
                         <a href="{{ route('dashboard.suppliers.index') }}" class="small-box-footer">@lang('site.read') <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
-                </div>  
+                </div>   -->
 
                 {{--clients--}}
                 <div class="col-lg-3 col-xs-6">

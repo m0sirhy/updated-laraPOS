@@ -24,11 +24,7 @@
 
                     @include('partials._errors')
 
-<<<<<<< HEAD
                     <form action="{{ route('dashboard.outlays.update', $outlay->id) }}" method="post" enctype="multipart/form-data">
-=======
-                    <form action="{{ route('dashboard.outlays.update', $product->id) }}" method="post" enctype="multipart/form-data">
->>>>>>> 61f508353c5a594b3dfc6b0eb1e0fa9fee19f33c
 
                         {{ csrf_field() }}
                         {{ method_field('put') }}
