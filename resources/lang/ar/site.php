@@ -80,6 +80,7 @@ return [
     'amount' => 'المبلغ',
     'outlays' => 'المصاريف',
     'payee'=> 'المستفيد',
+    'discount'=> 'خصم',
 
 
     'ar' => [

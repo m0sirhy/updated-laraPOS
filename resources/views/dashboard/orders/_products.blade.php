@@ -19,7 +19,9 @@
         @endforeach
         </tbody>
     </table>
-    <h3>@lang('site.total') <span>{{ number_format($order->total_price, 2) }}</span></h3>
+    <h3>@lang('site.discount') :<span>{{ number_format($order->discount, 2) }}</span></h3>
+
+    <h3>@lang('site.total') بعد الخصم: <span>{{ number_format($order->total_price, 2) }}</span></h3>
 
 </div>
 

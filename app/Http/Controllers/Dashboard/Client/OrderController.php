@@ -14,6 +14,7 @@ class OrderController extends Controller
 {
     public function create(Client $client)
     {
+        
         $categories = Category::with('products')->get();
         $orders = $client->orders()->with('products')->paginate(5);
         return view('dashboard.clients.orders.create', compact( 'client', 'categories', 'orders'));
@@ -74,9 +75,11 @@ class OrderController extends Controller
             ]);
 
         }//end of foreach
-
+        $total_price -=$request->discount ;
         $order->update([
-            'total_price' => $total_price
+            'total_price' => $total_price,
+            'discount' => $request->discount,
+            'status' =>$request->cash
         ]);
 
     }//end of attach order

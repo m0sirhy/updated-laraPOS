@@ -6,6 +6,7 @@ $(document).ready(function () {
         e.preventDefault();
         var name = $(this).data('name');
         var id = $(this).data('id');
+        
         var price = $.number($(this).data('price'), 2);
 
         $(this).removeClass('btn-success').addClass('btn-default disabled');

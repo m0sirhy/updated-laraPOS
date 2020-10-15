@@ -10,6 +10,7 @@ return [
             'users' => 'c,r,u,d',
             'suppliers' => 'c,r,u,d',
             'outlays' => 'c,r,u,d',
+            'purchacse' =>'c,r,u,d'
 
 
         ],

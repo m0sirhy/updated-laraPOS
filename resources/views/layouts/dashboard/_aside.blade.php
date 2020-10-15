@@ -23,11 +23,9 @@
                 <li><a href="{{ route('dashboard.products.index') }}"><i class="fa fa-th"></i><span>@lang('site.products')</span></a></li>
             @endif
 
-<!-- 
             @if (auth()->user()->hasPermission('read_suppliers'))
                 <li><a href="{{ route('dashboard.suppliers.index') }}"><i class="fa fa-archive"></i><span>@lang('site.suppliers')</span></a></li>
-            @endif -->
-
+            @endif 
             @if (auth()->user()->hasPermission('read_clients'))
                 <li><a href="{{ route('dashboard.clients.index') }}"><i class="fa fa-users"></i><span>@lang('site.clients')</span></a></li>
             @endif
