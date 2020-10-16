@@ -40,4 +40,11 @@ class Product extends Model
 
     }//end of orders
 
+    
+    public function purchaces()
+    {
+        return $this->belongsToMany(Order::class, 'product_purchace');
+
+    }//end of orders
+
 }//end of model

@@ -1,25 +1,27 @@
 <div id="print-area">
+    <h5>@lang('site.supplier_name') :<span>{{ $purchace->supplier->name }}</span></h5>
+
     <table class="table table-hover table-bordered">
 
         <thead>
-        <tr>
-            <th>@lang('site.name')</th>
-            <th>@lang('site.quantity')</th>
-            <th>@lang('site.price')</th>
-        </tr>
+            <tr>
+                <th>@lang('site.name')</th>
+                <th>@lang('site.quantity')</th>
+                <th>@lang('site.price')</th>
+            </tr>
         </thead>
 
         <tbody>
-        @foreach ($products as $product)
+            @foreach ($products as $product)
             <tr>
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->pivot->quantity }}</td>
                 <td>{{ number_format($product->pivot->quantity * $product->sale_price, 2) }}</td>
             </tr>
-        @endforeach
+            @endforeach
         </tbody>
     </table>
-    <h3>@lang('site.total') <span>{{ number_format($order->total_price, 2) }}</span></h3>
+    <h3>@lang('site.total') <span>{{ number_format($purchace->total_price, 2) }}</span></h3>
 
 </div>
 

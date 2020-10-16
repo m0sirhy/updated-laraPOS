@@ -8,7 +8,7 @@
 
             <h1>@lang('site.purchaces')
                 <small>{{ $purchaces->total() }} @lang('site.purchaces')  </small>
-             اجمالي الطلبات : {{$total}}
+             اجمالي الوارد : {{$total}}
             </h1>
 
             <ol class="breadcrumb">
@@ -53,7 +53,7 @@
 
                                 <table class="table table-hover">
                                     <tr>
-                                        <th>@lang('site.client_name')</th>
+                                        <th>@lang('site.supplier_name')</th>
                                         <th>@lang('site.price')</th>
 {{--                                        <th>@lang('site.status')</th>--}}
                                         <th>@lang('site.created_at')</th>
@@ -62,7 +62,7 @@
 
                                     @foreach ($purchaces as $purchace)
                                         <tr>
-                                            <td>{{ $purchace->client->name }}</td>
+                                            <td>{{ $purchace->supplier->name }}</td>
                                             <td>{{ number_format($purchace->total_price, 2) }}</td>
                                             {{--<td>--}}
                                                 {{--<button--}}
@@ -85,7 +85,7 @@
                                                     @lang('site.show')
                                                 </button>
                                                 @if (auth()->user()->hasPermission('update_purchaces'))
-                                                    <a href="{{ route('dashboard.clients.purchaces.edit', ['client' => $purchace->client->id, 'purchace' => $purchace->id]) }}" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i> @lang('site.edit')</a>
+                                                    <a href="{{ route('dashboard.suppliers.purchaces.edit', ['supplier' => $purchace->supplier->id, 'purchace' => $purchace->id]) }}" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i> @lang('site.edit')</a>
                                                 @else
                                                     <a href="#" disabled class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> @lang('site.edit')</a>
                                                 @endif

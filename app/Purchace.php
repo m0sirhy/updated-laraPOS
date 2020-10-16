@@ -4,8 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Purchase extends Model
+class Purchace extends Model
 {
+    protected $guarded = [];
+
     //
     public function supplier()
     {
@@ -15,7 +17,7 @@ class Purchase extends Model
     
     public function products()
     {
-        return $this->belongsToMany(Product::class, 'product_order')->withPivot('quantity');
+        return $this->belongsToMany(Product::class, 'product_purchace')->withPivot('quantity');
 
     }//end of products
 }//end of purchase

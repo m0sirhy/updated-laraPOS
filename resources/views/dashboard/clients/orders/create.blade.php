@@ -63,7 +63,7 @@
                                                 <td>{{ $product->stock }}</td>
                                                 <td>{{ number_format($product->sale_price, 2) }}</td>
                                                 <td>
-                                                    <a href="" id="product-{{ $product->id }}" data-name="{{ $product->name }}" data-id="{{ $product->id }}" data-price="{{ $product->sale_price }}" class="btn btn-success btn-sm add-product-btn">
+                                                    <a href="" id="product-{{ $product->id }}" data-name="{{ $product->name }}" data-id="{{ $product->id }}" data-price="{{ $product->sale_price }}" class="btn btn-success btn-sm add-product-btno">
                                                         <i class="fa fa-plus"></i>
                                                     </a>
                                                 </td>
@@ -129,12 +129,14 @@
                             <h4>@lang('site.discount') : <input type="number" name="discount" class=" form-control input-sm discount" min="0" value="0"></h4>
 
                             <h4>@lang('site.total') : <span class="total-price">0</span>
+                            <label class="form-check-label">نقدا:</label>
+                                <input type="radio" name="cash" value="1" checked>
+                                <label class="form-check-label">   دين /مؤجل:</label>
+                                <input type="radio" name="cash" value="0" >
 
-                                <input type="checkbox" class="form-check-input" name="cash" checked value="1">
-                                <label class="form-check-label" > نقدا</label>
                             </h4>
 
-                            <button class="btn btn-primary btn-block disabled" id="add-order-form-btn"><i class="fa fa-plus"></i> @lang('site.add_order')</button>
+                            <button class="btn btn-primary btn-block disabled" id="add-order-form-btno"><i class="fa fa-plus"></i> @lang('site.add_order')</button>
 
                         </form>
 

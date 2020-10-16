@@ -32,7 +32,7 @@ return [
     'no_records' => 'للاسف لا يوجد اي سجلات',
 
     'clients' => 'الزبائن',
-    'client_name' => 'اسم العميل',
+    'client_name' => 'اسم الزبون',
     'phone' => 'الهاتف',
     'address' => 'العنوان',
     'previous_orders' => 'الطلبات السابقه',
@@ -40,12 +40,12 @@ return [
     'add_order' => 'اضف طلب',
     'edit_order' => 'تعديل طلب',
 
+    'supplier_name' => 'اسم المورد',
     'suppliers' => 'الموردين',
-    'client_name' => 'اسم المورد',
     'phone' => 'الهاتف',
     'address' => 'العنوان',
     'previous_purchaces' => 'فواتير الشراء السابقه',
-    'purchaces' => 'فواتير الشراء',
+    'purchaces' => 'المشتريات',
     'add_purchace' => 'اضف فاتورة شراء',
     'edit_purchace' => 'تعديل فاتورة شراء',
 
@@ -79,8 +79,8 @@ return [
     'profit_percent' => 'المكسب',
     'amount' => 'المبلغ',
     'outlays' => 'المصاريف',
-    'payee'=> 'المستفيد',
-    'discount'=> 'خصم',
+    'payee' => 'المستفيد',
+    'discount' => 'خصم',
 
 
     'ar' => [

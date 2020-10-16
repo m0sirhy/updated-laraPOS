@@ -1,7 +1,7 @@
 $(document).ready(function () {
     
     //add product btn
-    $('.add-product-btno').on('click', function (e) {
+    $('.add-product-btn').on('click', function (e) {
 
         e.preventDefault();
         var name = $(this).data('name');
@@ -19,7 +19,7 @@ $(document).ready(function () {
                 <td><button class="btn btn-danger btn-sm remove-product-btn" data-id="${id}"><span class="fa fa-trash"></span></button></td>
             </tr>`;
 
-        $('.order-list').append(html);
+        $('.purchace-list').append(html);
 
         //to calculate total price
         calculateTotal();
@@ -57,8 +57,8 @@ $(document).ready(function () {
 
     });//end of product quantity change
 
-    //list all order products
-    $('.order-products').on('click', function(e) {
+    //list all purchace products
+    $('.purchace-products').on('click', function(e) {
 
         e.preventDefault();
 
@@ -72,15 +72,15 @@ $(document).ready(function () {
             success: function(data) {
 
                 $('#loading').css('display', 'none');
-                $('#order-product-list').empty();
-                $('#order-product-list').append(data);
+                $('#purchace-product-list').empty();
+                $('#purchace-product-list').append(data);
 
             }
         })
 
-    });//end of order products click
+    });//end of purchace products click
 
-    //print order
+    //print purchace
     $(document).on('click', '.print-btn', function() {
 
         $('#print-area').printThis({
@@ -91,7 +91,7 @@ $(document).ready(function () {
             printContainer: false,       // print outer container/$.selector
 
             pageTitle: "**",              // add title to print page
-            header: "<h1 style=' text-align:center;'>محلات العنود للمواد الغذائية </h1> <br> <h3 style=' border: 2px solid black;border-radius: 5px; text-align:center;'>فاتورة مبيعات</h3>",
+            header: "<h1 style=' text-align:center;'>محلات العنود للمواد الغذائية </h1> <br> <h3 style=' border: 2px solid black;border-radius: 5px; text-align:center;'>فاتورة مشتريات</h3>",
             footer: " <div style='  position: fixed; bottom: 0;'> <h5> العنوان : غزة الزيتون / لفة السوافيري </h5> <h5> ابو عثمان السرحي ٠٥٩٧٤٤١٠٥٤ <br> سلطان السرحي ٠٥٩٧٧٦٤٢٨٤</h5> </div>",
                 });
 
@@ -104,7 +104,7 @@ function calculateTotal() {
 
     var price = 0;
 
-    $('.order-list .product-price').each(function(index) {
+    $('.purchace-list .product-price').each(function(index) {
         
         price += parseFloat($(this).html().replace(/,/g, ''));
 
@@ -115,11 +115,11 @@ function calculateTotal() {
     //check if price > 0
     if (price > 0) {
 
-        $('#add-order-form-btno').removeClass('disabled')
+        $('#add-purchace-form-btn').removeClass('disabled')
 
     } else {
 
-        $('#add-order-form-btno').addClass('disabled')
+        $('#add-purchace-form-btn').addClass('disabled')
 
     }//end of else
 

@@ -266,8 +266,11 @@
 
 {{--custom js--}}
 <script src="{{ asset('dashboard_files/js/custom/image_preview.js') }}"></script>
-<script src="{{ asset('dashboard_files/js/custom/order.js') }}"></script>
-
+@if (\Request::is('*/orders/*')) 
+    <script src="{{ asset('dashboard_files/js/custom/order.js') }}"></script>
+@else
+<script src="{{ asset('dashboard_files/js/custom/purchace.js') }}"></script>
+@endif
 <script>
     $(document).ready(function () {
 

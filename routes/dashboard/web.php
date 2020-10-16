@@ -21,13 +21,19 @@ Route::group(
             Route::resource('clients', 'ClientController')->except(['show']);
             Route::resource('clients.orders', 'Client\OrderController')->except(['show']);
 
-            //supplier routes
-            Route::resource('suppliers', 'SupplierController')->except(['show']);
-            Route::resource('suppliers.purchase', 'Client\OrderController')->except(['show']);
-
             //order routes
             Route::resource('orders', 'OrderController');
             Route::get('/orders/{order}/products', 'OrderController@products')->name('orders.products');
+
+
+            //supplier routes
+            Route::resource('suppliers', 'SupplierController')->except(['show']);
+            Route::resource('suppliers.purchaces', 'Supplier\PurchaceController')->except(['show']);
+
+            //purchaces routes
+            Route::resource('purchaces', 'PurchaceController');
+            Route::get('/purchaces/{purchace}/products', 'PurchaceController@products')->name('purchaces.products');
+
 
 
             //user routes

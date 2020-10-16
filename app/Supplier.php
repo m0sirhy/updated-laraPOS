@@ -20,7 +20,8 @@ class Supplier extends Model
     }//end of get name attribute
 
     public function purchaces()
-    {
+
+{
         return $this->hasMany(Purchace::class);
 
     }//end of orders
