@@ -56,6 +56,11 @@
                                 <th>@lang('site.name')</th>
                                 <th>@lang('site.phone')</th>
                                 <th>@lang('site.address')</th>
+                                <th>@lang('site.total')</th>
+
+                                <th>اجمالي الطلبات النقدية</th>
+                                <th>اجمالي الطلبات الموجلة (دين)</th>
+
                                 <th>@lang('site.add_order')</th>
                                 <th>@lang('site.action')</th>
                             </tr>
@@ -68,6 +73,11 @@
                                     <td>{{ $client->name }}</td>
                                     <td>{{ is_array($client->phone) ? implode($client->phone, '-') : $client->phone }}</td>
                                     <td>{{ $client->address }}</td>
+                                    <td>{{ $client->orders->sum('total_price') }}</td>
+
+                                    <td>{{ $client->orders->where('status','1')->sum('total_price') }}</td>
+                                    <td>{{ $client->orders->where('status','0')->sum('total_price') }}</td>
+
                                     <td>
                                         @if (auth()->user()->hasPermission('create_orders'))
                                             <a href="{{ route('dashboard.clients.orders.create', $client->id) }}" class="btn btn-primary btn-sm">@lang('site.add_order')</a>

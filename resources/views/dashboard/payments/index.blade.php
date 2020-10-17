@@ -8,7 +8,7 @@
 
         <h1>@lang('site.payments')
             <small> @lang('site.payments') {{ $payments->total() }} </small>
-            اجمالي المصروفات : {{$total}}
+            اجمالي الدفعات : {{$total}}
         </h1>
 
         <ol class="breadcrumb">
@@ -31,7 +31,7 @@
 
                      
                     <div class="col-md-4">
-                                <select name="supplier_id" class="form-control">
+                                <select name="search" class="form-control">
                                     <option value="">@lang('site.all_suppliers')</option>
                                     @foreach ($suppliers as $supplier)
                                         <option value="{{ $supplier->id }}" {{ request()->supplier_id == $supplier->id ? 'selected' : '' }}>{{ $supplier->name }}</option>
@@ -64,9 +64,10 @@
                         <tr>
                             <th>#</th>
                             <th>@lang('site.name')</th>
-                            <th>@lang('site.payee')</th>
+                            <th>@lang('site.payee')/@lang('site.supplier_name')</th>
                             <th>@lang('site.amount')</th>
                             <th>@lang('site.description')/البيان</th>
+                            <th>@lang('site.created_at')</th>
 
 
                             <th>@lang('site.action')</th>
@@ -81,6 +82,8 @@
                             <td>{{ $payment->supplier->name}}</td>
                             <td>{{ $payment->amount }}</td>
                             <td>{!! $payment->statment !!}</td>
+                            <td>{{ $payment->created_at->toFormattedDateString() }}</td>
+
 
 
                             <td>

@@ -42,7 +42,7 @@ return [
 
     'supplier_name' => 'اسم المورد',
     'suppliers' => 'الموردين',
-        'all_suppliers' => 'الموردين',
+    'all_suppliers' => 'الموردين',
 
     'phone' => 'الهاتف',
     'address' => 'العنوان',
@@ -70,7 +70,8 @@ return [
     'category' => 'القسم',
     'show_products' => 'عرض المنتجات',
     'created_at' => 'تم اضافته',
-
+    'status' => 'الية الدفع',
+    
     'products' => 'المنتجات',
     'product' => 'المنتج',
     'quantity' => 'الكميه',
@@ -80,7 +81,7 @@ return [
     'sale_price' => 'سعر البيع',
     'stock' => 'المخزن',
     'profit_percent' => 'المكسب',
-    'amount' => 'المبلغ',
+    'amount' => ' المبلغ',
     'outlays' => 'المصاريف',
     'payee' => 'المستفيد',
     'discount' => 'خصم',
