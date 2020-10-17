@@ -13,5 +13,5 @@ class Outlay extends Model
     {
         return $this->belongsTo(User::class);
 
-    }//end fo category
+    }
 }

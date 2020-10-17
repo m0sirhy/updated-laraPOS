@@ -42,12 +42,15 @@ return [
 
     'supplier_name' => 'اسم المورد',
     'suppliers' => 'الموردين',
+        'all_suppliers' => 'الموردين',
+
     'phone' => 'الهاتف',
     'address' => 'العنوان',
     'previous_purchaces' => 'فواتير الشراء السابقه',
     'purchaces' => 'المشتريات',
     'add_purchace' => 'اضف فاتورة شراء',
     'edit_purchace' => 'تعديل فاتورة شراء',
+    'payments' => 'دفعات للموردين',
 
     'users' => 'المشرفين',
     'first_name' => 'الاسم الاول',

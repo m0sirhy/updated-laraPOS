@@ -16,6 +16,8 @@ Route::group(
 
             //outlay routes
             Route::resource('outlays', 'OutlayController')->except(['show']);
+             //payment routes
+             Route::resource('payments', 'PaymentController')->except(['show']);
 
             //client routes
             Route::resource('clients', 'ClientController')->except(['show']);

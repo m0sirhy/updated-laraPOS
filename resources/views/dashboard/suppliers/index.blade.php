@@ -56,6 +56,11 @@
                                 <th>@lang('site.name')</th>
                                 <th>@lang('site.phone')</th>
                                 <th>@lang('site.address')</th>
+                                <th>اجمالي المشتريات</th>
+                                <th>اجمالي الدفعات</th>
+                                <th>اجمالي المطلوب</th>
+
+
                                 <th>@lang('site.add_purchace')</th>
                                 <th>@lang('site.action')</th>
                             </tr>
@@ -68,6 +73,12 @@
                                     <td>{{ $supplier->name }}</td>
                                     <td>{{ is_array($supplier->phone) ? implode($supplier->phone, '-') : $supplier->phone }}</td>
                                     <td>{{ $supplier->address }}</td>
+                                    <td>{{ $supplier->purchaces->sum('total_price')}}  </td>
+                                    <td>{{ $supplier->payments->sum('amount') }}</td>
+                                    <td>{{ $supplier->purchaces->sum('total_price')  - $supplier->payments->sum('amount')}}</td>
+
+
+
                                     <td>
                                         @if (auth()->user()->hasPermission('create_purchaces'))
                                             <a href="{{ route('dashboard.suppliers.purchaces.create', $supplier->id) }}" class="btn btn-primary btn-sm">@lang('site.add_purchace')</a>

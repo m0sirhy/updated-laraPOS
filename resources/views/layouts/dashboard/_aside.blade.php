@@ -30,6 +30,9 @@
             @if (auth()->user()->hasPermission('read_purchaces'))
                 <li><a href="{{ route('dashboard.purchaces.index') }}"><i class="fa fa-shopping-cart"></i><span>@lang('site.purchaces')</span></a></li>
             @endif
+            @if (auth()->user()->hasPermission('read_payments'))
+                <li><a href="{{ route('dashboard.payments.index') }}"><i class="fa fa-money"></i><span>@lang('site.payments')</span></a></li>
+            @endif
             @if (auth()->user()->hasPermission('read_clients'))
                 <li><a href="{{ route('dashboard.clients.index') }}"><i class="fa fa-users"></i><span>@lang('site.clients')</span></a></li>
             @endif
