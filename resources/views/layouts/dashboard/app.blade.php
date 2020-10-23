@@ -243,8 +243,8 @@
             <div class="pull-right hidden-xs">
                 <b>Version</b> 2.4.0
             </div>
-            <strong>Copyright &copy; 2014-2016
-                <a href="https://www.facebook.com/m0sirhy">م.محمد السرحي</a>.</strong> All rights
+            <strong>Copyright &copy; 2016-2020
+                <!-- <a href="https://www.facebook.com/m0sirhy">م.محمد السرحي</a>.</strong> All rights -->
             reserved.
         </footer>
 
