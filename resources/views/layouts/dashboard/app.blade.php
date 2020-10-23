@@ -244,8 +244,7 @@
                 <b>Version</b> 2.4.0
             </div>
             <strong>Copyright &copy; 2014-2016
-                <a href="https://www.facebook.com/m0sirhy">     {{Request::path()}}
-م.محمد السرحي</a>.</strong> All rights
+                <a href="https://www.facebook.com/m0sirhy">م.محمد السرحي</a>.</strong> All rights
             reserved.
         </footer>
 
