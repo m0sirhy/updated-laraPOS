@@ -91,8 +91,8 @@ $(document).ready(function () {
             printContainer: false,       // print outer container/$.selector
 
             pageTitle: "**",              // add title to print page
-            header: "<h1 style=' text-align:center;'>محلات العنود للمواد الغذائية </h1> <br> <h3 style=' border: 2px solid black;border-radius: 5px; text-align:center;'>فاتورة مبيعات</h3>",
-            footer: " <div style='  position: fixed; bottom: 0;'> <h5> العنوان : غزة الزيتون / لفة السوافيري </h5> <h5> ابو عثمان السرحي ٠٥٩٧٤٤١٠٥٤ <br> سلطان السرحي ٠٥٩٧٧٦٤٢٨٤</h5> </div>",
+            // header: "<h1 style=' text-align:center;'>محلات العنود للمواد الغذائية </h1> <br> <h3 style=' border: 2px solid black;border-radius: 5px; text-align:center;'>فاتورة مبيعات</h3>",
+            // footer: " <div style='  position: fixed; bottom: 0;'> <h5> العنوان : غزة الزيتون / لفة السوافيري </h5> <h5> ابو عثمان السرحي ٠٥٩٧٤٤١٠٥٤ <br> سلطان السرحي ٠٥٩٧٧٦٤٢٨٤</h5> </div>",
                 });
 
     });//end of click function
