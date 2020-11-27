@@ -126,7 +126,7 @@
                                 </tbody>
 
                             </table><!-- end of table -->
-                            <h4>@lang('site.discount') : <input type="number" name="discount" class=" form-control input-sm discount" min="0" value="0"></h4> -->
+                            <h4>@lang('site.discount') : <input type="number" name="discount" class=" form-control input-sm discount" min="0" value="0"></h4> 
 
                             <h4>@lang('site.total') : <span class="total-price">0</span>
                                 <!-- <label class="form-check-label">نقدا:</label>
