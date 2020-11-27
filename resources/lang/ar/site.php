@@ -35,10 +35,10 @@ return [
     'client_name' => 'اسم الزبون',
     'phone' => 'الهاتف',
     'address' => 'العنوان',
-    'previous_orders' => 'الطلبات السابقه',
-    'orders' => 'الطلبات',
-    'add_order' => 'اضف طلب',
-    'edit_order' => 'تعديل طلب',
+    'previous_orders' => 'المبيعات السابقه',
+    'orders' => 'المبيعات',
+    'add_order' => 'اضف فاتورة بيع ',
+    'edit_order' => 'تعديل فاتورة بيع',
 
     'supplier_name' => 'اسم المورد',
     'suppliers' => 'الموردين',
@@ -50,7 +50,7 @@ return [
     'purchaces' => 'المشتريات',
     'add_purchace' => 'اضف فاتورة شراء',
     'edit_purchace' => 'تعديل فاتورة شراء',
-    'payments' => 'دفعات للموردين',
+    'payments' => 'سندات الصرف',
 
     'users' => 'المشرفين',
     'first_name' => 'الاسم الاول',
