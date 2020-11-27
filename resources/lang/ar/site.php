@@ -13,7 +13,7 @@ return [
     'search' => 'بحث',
     'show' => 'عرض',
     'loading' => 'جاري التحميل',
-    'print' => 'طبع',
+    'print' => 'طباعة',
 
     'confirm_delete' => 'تاكيد الحذف',
     'yes' => 'نعم',
